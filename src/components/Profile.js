@@ -2,8 +2,22 @@
 
 import React from 'react';
 
+const stylesImg = {
+  width: '100%',
+  float: 'right'
+}
+
 const Profile = () => (
-  <h2>USER name, pic, and data</h2>
+  <div className="card no-gutters">
+    <div className="row">
+      <div className="col-6">
+        <h2>UserName Posts</h2>
+      </div>
+      <div className="col-6">
+        <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>
+      </div>
+    </div>
+  </div>
 )
 
 export default Profile;
