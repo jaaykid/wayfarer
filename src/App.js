@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+// TODO: connect to nav
+//import Nav from './components/Nav';
+import TheRoutes from './config/Routes';
 
 class App extends Component {
   render () {
     return(
-      <h1>Hello, is it me youre looking for?</h1>
+      <>
+        {/*<Nav /> header/nav*/}
+        {TheRoutes}
+      </>
     )
   }
 }
+
 export default App;
