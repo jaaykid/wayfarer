@@ -7,7 +7,6 @@ class Home extends Component {
         return (
             <>
             <Hero_Splash />
-
             </>
         )
     }

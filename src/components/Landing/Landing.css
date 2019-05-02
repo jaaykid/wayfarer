@@ -1,0 +1,30 @@
+
+#hero-img {
+    color: white;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+#hero-img img{
+    height: 100vh;
+    width: 100%;
+    background: cover;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ) url('./hero.jpg')
+}
+
+#hero-img h1 {
+    width: 60%;
+    left: 20%;
+    top: 20%;
+    position: absolute;
+    font-weight: 200;
+    letter-spacing: 3px;
+    word-spacing: 9px;
+    filter: blur(0.4px);
+    -webkit-filter: blur(0.4px);
+}
