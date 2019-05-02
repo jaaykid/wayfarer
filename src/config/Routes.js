@@ -2,8 +2,8 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 // TODO: connect this when Home exists
 //import Home from '../components/Home';
-import ProfilePosts from '../containers/ProfilePosts';
-import CityPosts from '../containers/CityPosts'
+import ProfilePosts from '../ProfilePosts';
+import CityPosts from '../CityPosts'
 
 export default (
   <Switch>

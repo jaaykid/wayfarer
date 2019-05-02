@@ -3,9 +3,9 @@
 //                      and call each Post
 
 import React, {Component} from 'react';
-import City from '../components/City';
-import Cities from '../components/Cities';
-import PostsContainer from './PostsContainer';
+import City from './components/City';
+import Cities from './components/Cities';
+import PostsContainer from './containers/PostsContainer';
 
 class CityPosts extends Component {
   render() {

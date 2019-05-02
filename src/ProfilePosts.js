@@ -5,9 +5,9 @@
 //calls Cities for the sidebar
 
 import React, {Component} from 'react';
-import Profile from '../components/Profile';
-import Cities from '../components/Cities';
-import PostsContainer from './PostsContainer';
+import Profile from './components/Profile';
+import Cities from './components/Cities';
+import PostsContainer from './containers/PostsContainer';
 
 class ProfileContainer extends Component {
   render() {
