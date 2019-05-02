@@ -11,9 +11,17 @@ class CityPosts extends Component {
   render() {
     return (
       <>
-        <Cities />
-        <City />
-        <PostsContainer postType="city"/>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-4">
+              <Cities />
+            </div>
+            <div className="col-md-8">
+              <City />
+              <PostsContainer postType="city"/>
+            </div>
+          </div>
+        </div>
       </>
     )
   }

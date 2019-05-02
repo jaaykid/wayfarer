@@ -12,11 +12,17 @@ import PostsContainer from './containers/PostsContainer';
 class ProfileContainer extends Component {
   render() {
     return (
-      <>
-        <Cities />
-        <Profile />
-        <PostsContainer postType="user"/>
-      </>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-4">
+            <Cities />
+          </div>
+          <div className="col-md-8">
+            <Profile />
+            <PostsContainer postType="user"/>
+          </div>
+        </div>
+      </div>
     )
   }
 }

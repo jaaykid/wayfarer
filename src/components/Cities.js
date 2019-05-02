@@ -3,8 +3,43 @@
 
 import React from 'react';
 
+const stylesImg = {
+  width: '100%'
+}
+
 const Cities = () => (
-  <sidebar>here's a sidebar of cities</sidebar>
+  <aside>
+      <div className="card no-gutters">
+        <div className="row">
+          <div className="col-4">
+            <img src="/images/cities/SF.jpg" alt="San Francisco skyline" style={stylesImg}/>
+          </div>
+          <div className="col-8">
+            San Francisco
+          </div>
+        </div>
+      </div>
+      <div className="card row no-gutters">
+        <div className="row">
+          <div className="col-4">
+            <img src="/images/cities/SF.jpg" alt="San Francisco skyline" style={stylesImg}/>
+          </div>
+          <div className="col-8">
+            San Francisco
+          </div>
+        </div>
+      </div>
+      <div className="card row no-gutters">
+        <div className="row">
+          <div className="col-4">
+            <img src="/images/cities/SF.jpg" alt="San Francisco skyline" style={stylesImg}/>
+          </div>
+          <div className="col-8">
+            San Francisco
+          </div>
+        </div>
+      </div>
+  </aside>
 )
 
 export default Cities;
