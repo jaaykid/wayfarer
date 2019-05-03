@@ -6,7 +6,7 @@ import CityPosts from '../CityPosts'
 
 export default (
   <Switch>
-    <Route path="/home" component={Home} />
+    <Route exact path="/" component={Home} />
     <Route path="/profile" component={ProfilePosts} />
     <Route path="/city" component={CityPosts} />
   </Switch>
