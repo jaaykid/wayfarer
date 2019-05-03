@@ -10,11 +10,22 @@ class Nav extends Component  {
     console.log('you clicked it')
    this.setState({login: true});
    document.querySelector('.modal').classList.add('display');
-  }
+  };
+
+//   handleSignUp = () => {
+//       console.log('clicked sign up');
+//       this.setState({login:true});
+//       document.querySelector('.modal').classList.add('display');
+//   };
 
   componentDidMount() {
     document.getElementById('login').addEventListener('click', this.handleLogin);
   }
+
+//   componentDidMount() {
+//     document.getElementById('signup').addEventListener('click', this.handleSignUp);
+//   }
+
   render() {
     return (
       <div id="navbar">
