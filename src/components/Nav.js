@@ -8,14 +8,45 @@ class Nav extends Component  {
 
   handleLogin = () => {
     console.log('you clicked it')
-   this.setState({login: true});
-   document.querySelector('.modal').classList.add('display');
-   this.handleLoginModal();
+    this.setState({login: true});
+    document.querySelector('.modal').classList.add('display');
+    this.handleLoginModal();
+};
+
+
+  handleSignUp = () => {
+      console.log('clicked sign up');
+      this.setState({login:true});
+      document.querySelector('.modal').classList.add('display');
+      this.handleSignUpModal();
   };
-  
+
+  addSignUp = () => {
+      console.log('adding sign up');
+      document.getElementById('signUpModalBox').classList.remove('hide');
+      document.getElementById('loginModalBox').classList.add('hide');
+  }
+
+  removeSignUp = () => {
+      console.log('removing signup');
+      document.getElementById('loginModalBox').classList.remove('hide');
+      document.getElementById('signUpModalBox').classList.add('hide');
+  }
+
+  handleSignUpModal = () => {
+      this.addSignUp();
+      document.getElementById('logInPageBtn').addEventListener('click', this.removeSignUp);
+      document.getElementById('cancelModal2').addEventListener('click', this.closeSignUpModal);
+      document.getElementById('joinBtn').addEventListener('click', this.submitSignUp);
+      document.getElementById('joinUsBtn').addEventListener('click', this.addSignUp);
+ }
+
   handleLoginModal = () => {
+      this.removeSignUp();
       document.getElementById('cancelModal').addEventListener('click', this.closeLoginModal);
       document.getElementById('loginBtn').addEventListener('click', this.submitLogin);
+      document.getElementById('joinUsBtn').addEventListener('click', this.addSignUp);
+      document.getElementById('logInPageBtn').addEventListener('click', this.removeSignUp);
   }
 
   submitLogin = (e) => {
@@ -25,19 +56,24 @@ class Nav extends Component  {
   document.getElementById('newLoginSub').removeEventListener('submit', this.submitLogin);
 }
 
+  submitSignUp = (e) => {
+    e.preventDefault();
+    console.log('Submitting new user');
+    document.getElementById('loginModal').classList.remove('display');
+    document.getElementById('newSignUpSub').removeEventListener('submit', this.submitSignUp);
+  }
+
   closeLoginModal = () => {
     console.log('closing login modal');
     document.getElementById('loginModal').classList.remove('display');
     document.getElementById('cancelModal').removeEventListener('click', this.closeLoginModal);
   }
 
-  handleSignUp = () => {
-      console.log('clicked sign up');
-      this.setState({login:true});
-      document.querySelector('.modal').classList.add('display');
-      this.handleLoginModal();
-  };
-
+  closeSignUpModal = () => {
+    console.log('closing sign up modal');
+    document.querySelector('.modal').classList.remove('display');
+    document.getElementById('cancelModal2').removeEventListener('click', this.closeSignUpModal);
+  }
 
   componentDidMount() {
     document.getElementById('login').addEventListener('click', this.handleLogin);

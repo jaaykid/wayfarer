@@ -26,9 +26,10 @@ img {
   border-radius: 5px;
   box-shadow: -5px -5px 8px #666;
 }
-#newPostSub, #newLoginSub {
+#newPostSub, #newLoginSub, #newSignUpSub {
   overflow: auto;
 }
+
 .btn {
   margin: 8px;
 }
