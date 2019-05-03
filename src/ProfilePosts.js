@@ -10,6 +10,33 @@ import Cities from './components/Cities';
 import PostsContainer from './containers/PostsContainer';
 
 class ProfileContainer extends Component {
+
+  submitBioEdit = (e) => {
+    e.preventDefault();
+    console.log('submitting post info');
+    document.querySelector('.editBioBlock').classList.add('hide');
+    document.querySelector('.bioDisplay').classList.remove('hide');
+    document.getElementById('cancelEdit').removeEventListener('click', this.closeEditBio);
+    document.querySelector('.editBioBlock').removeEventListener('submit', this.submitBioEdit);
+  }
+  closeEditBio = () => {
+    console.log('closing post modal');
+    document.querySelector('.editBioBlock').classList.add('hide');
+    document.querySelector('.bioDisplay').classList.remove('hide');
+    document.getElementById('cancelEdit').removeEventListener('click', this.closeEditBio);
+    document.querySelector('.editBioBlock').removeEventListener('submit', this.submitBioEdit);
+  }
+  openEditBio = () => {
+    document.querySelector('.editBioBlock').classList.remove('hide');
+    document.querySelector('.bioDisplay').classList.add('hide');
+    document.getElementById('cancelEdit').addEventListener('click', this.closeEditBio);
+    document.querySelector('.editBioBlock').addEventListener('submit', this.submitBioEdit);
+  }
+
+  componentDidMount() {
+    document.querySelector('.editButton').addEventListener('click', this.openEditBio);
+  }
+
   render() {
     return (
       <div className="container-fluid">
@@ -19,6 +46,13 @@ class ProfileContainer extends Component {
           </div>
           <div className="col-md-8">
             <Profile />
+            <div className="postHead row">
+              <div className="col-1"> </div>
+              <h2 className="col-9">Your Posts</h2>
+              <div className="col-1">
+              </div>
+              <div className="col-1"> </div>
+            </div>
           <PostsContainer />
           </div>
         </div>
