@@ -14,7 +14,6 @@ class ModalPost extends Component {
             <textarea className="form-control" rows="6" name="postBody"></textarea>
             <input type="submit" className="btn btn-primary float-right" id="postBtn" value="Post It" />
             <input type="button" className="btn btn-warning float-right" id="cancelPost" value="Cancel" />
-
           </form>
         </div>
       </div>
