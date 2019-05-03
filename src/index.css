@@ -3,22 +3,32 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+img {
+  width: 100%;
+}
 .hide {
   display: none;
 }
 .display {
   display: initial;
 }
-
 .modal {
-  margin: 200px auto;
-  width: 100%;
+  padding-top: 200px;
   background: #FFFFFF40;
 }
-
 .modalBox {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  min-width: 400px;
   background: #FFF;
-  width: 400px;
-  height: 600px;
+  border: 5px outset #EEE;
+  border-radius: 5px;
+  box-shadow: -5px -5px 8px #666;
+}
+#newPostSub {
+  overflow: auto;
+}
+.btn {
+  margin: 8px;
 }

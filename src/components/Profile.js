@@ -12,6 +12,7 @@ const Profile = () => (
     <div className="row">
       <div className="col-6">
         <h2>UserName Posts</h2>
+        Name, City, SignUp Date *edit me
       </div>
       <div className="col-6">
         <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>

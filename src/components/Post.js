@@ -2,19 +2,17 @@
 // TODO: data passed in props
 
 import React from 'react';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
-const stylesImg = {
-  width: '100%'
-}
-
-const Post = (props) => (
+const Post = () => (
   <section className="PostList">
     <div className="card no-gutters">
       <div className="row">
         <div className="col-2">
-          <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>
+          <img src="/images/Placeholder.png" alt="UserName"/>
         </div>
         <div className="col-10">
+          <h3><Link to="/post">Post title</Link></h3>
           Sorry, must dash! Pure mathematics can not lie! That's a relief. I hate babysitters. No. You're too short and bossy, and your nose is all funny. Rest is for the weary, sleep is for the dead. I feel like a hungry man eager for the feast!
         </div>
       </div>
@@ -22,9 +20,10 @@ const Post = (props) => (
     <div className="card no-gutters">
       <div className="row">
         <div className="col-2">
-          <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>
+          <img src="/images/Placeholder.png" alt="UserName"/>
         </div>
         <div className="col-10">
+        <h3><Link to="/post">Post title</Link></h3>
           Sorry, must dash! Pure mathematics can not lie! That's a relief. I hate babysitters. No. You're too short and bossy, and your nose is all funny. Rest is for the weary, sleep is for the dead. I feel like a hungry man eager for the feast!
         </div>
       </div>
@@ -32,9 +31,10 @@ const Post = (props) => (
     <div className="card no-gutters">
       <div className="row">
         <div className="col-2">
-          <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>
+          <img src="/images/Placeholder.png" alt="UserName"/>
         </div>
         <div className="col-10">
+        <h3><Link to="/post">Post title</Link></h3>
           Sorry, must dash! Pure mathematics can not lie! That's a relief. I hate babysitters. No. You're too short and bossy, and your nose is all funny. Rest is for the weary, sleep is for the dead. I feel like a hungry man eager for the feast!
         </div>
       </div>
@@ -42,9 +42,10 @@ const Post = (props) => (
     <div className="card no-gutters">
       <div className="row">
         <div className="col-2">
-          <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>
+          <img src="/images/Placeholder.png" alt="UserName"/>
         </div>
         <div className="col-10">
+        <h3><Link to="/post">Post title</Link></h3>
           Sorry, must dash! Pure mathematics can not lie! That's a relief. I hate babysitters. No. You're too short and bossy, and your nose is all funny. Rest is for the weary, sleep is for the dead. I feel like a hungry man eager for the feast!
         </div>
       </div>

@@ -19,7 +19,7 @@ class ProfileContainer extends Component {
           </div>
           <div className="col-md-8">
             <Profile />
-            <PostsContainer postType="user"/>
+          <PostsContainer />
           </div>
         </div>
       </div>
