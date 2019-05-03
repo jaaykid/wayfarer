@@ -10,13 +10,34 @@ class Nav extends Component  {
     console.log('you clicked it')
    this.setState({login: true});
    document.querySelector('.modal').classList.add('display');
+   this.handleLoginModal();
   };
+  
+  handleLoginModal = () => {
+      document.getElementById('cancelModal').addEventListener('click', this.closeLoginModal);
+      document.getElementById('loginBtn').addEventListener('click', this.submitLogin);
+  }
+
+  submitLogin = (e) => {
+  e.preventDefault();
+  console.log('submitting login info');
+  document.getElementById('loginModal').classList.remove('display');
+  document.getElementById('newLoginSub').removeEventListener('submit', this.submitLogin);
+}
+
+  closeLoginModal = () => {
+    console.log('closing login modal');
+    document.getElementById('loginModal').classList.remove('display');
+    document.getElementById('cancelModal').removeEventListener('click', this.closeLoginModal);
+  }
 
   handleSignUp = () => {
       console.log('clicked sign up');
       this.setState({login:true});
       document.querySelector('.modal').classList.add('display');
+      this.handleLoginModal();
   };
+
 
   componentDidMount() {
     document.getElementById('login').addEventListener('click', this.handleLogin);
