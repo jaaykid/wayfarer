@@ -6,8 +6,8 @@ const stylesImg = {
   width: '100%',
   float: 'right'
 }
-
-const Profile = () => (
+const Profile = (props) => {
+  return (
   <div className="card no-gutters">
     <div className="row">
       <div className="col-5">
@@ -18,7 +18,7 @@ const Profile = () => (
           SignUp Date: DATE
         </div>
         <div className="editBioBlock hide">
-          <form id="editBioForm" novalidate>
+          <form id="editBioForm" noValidate>
             <input type="text" className="form-control" id="userName" name="userName" value="some cool name"/>
             <input type="text" className="form-control" id="cityList" name="preferredCity" value="Cities"/>
             <input type="submit" className="btn btn-primary float-right" id="submitEdit" value="Submit Edits" />
@@ -35,5 +35,5 @@ const Profile = () => (
     </div>
   </div>
 )
-
+}
 export default Profile;

@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 
 class ShowPost extends Component {
+
   render() {
+    console.log(this.props);
     return (
       <div className="card no-gutters">
         <div className="row">
