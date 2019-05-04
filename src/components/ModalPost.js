@@ -6,9 +6,9 @@ class ModalPost extends Component {
       <div className="modal" id="postModal">
         <div className="modalBox" id="postModalBox">
           <h3>Create a new post for: CITY NAME</h3>
-          <form id="newPostSub" novalidate>
+          <form id="newPostSub" noValidate>
             <div className="form-group">
-              <label for="postTitle">Title</label><br />
+              <label htmlFor="postTitle">Title</label><br />
               <input type="text" className="form-control" id="postTitle" name="title" placeholder="Enter your post title"/>
             </div>
             <textarea className="form-control" rows="6" name="postBody"></textarea>

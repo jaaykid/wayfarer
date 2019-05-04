@@ -7,7 +7,7 @@ class Modal extends Component {
       <div className="modal" id="loginModal">
         <div className="modalBox" id="loginModalBox">
           <h3>log in</h3>
-          <form id="newLoginSub" novalidate>
+          <form id="newLoginSub" noValidate>
             <div className="form-group">
               <input type="text" className="form-control" id="postTitle" name="title" placeholder="username"/>
             </div>
