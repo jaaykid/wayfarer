@@ -53,6 +53,7 @@ class Nav extends Component  {
   e.preventDefault();
   console.log('submitting login info');
   document.getElementById('loginModal').classList.remove('display');
+  document.getElementById('loginBtn').addEventListener('click', window.location.assign('/profile'));
   document.getElementById('newLoginSub').removeEventListener('submit', this.submitLogin);
 }
 
@@ -60,6 +61,7 @@ class Nav extends Component  {
     e.preventDefault();
     console.log('Submitting new user');
     document.getElementById('loginModal').classList.remove('display');
+    document.getElementById('loginBtn').addEventListener('click', window.location.assign('/profile'));
     document.getElementById('newSignUpSub').removeEventListener('submit', this.submitSignUp);
   }
 
