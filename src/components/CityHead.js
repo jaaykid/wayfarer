@@ -1,9 +1,11 @@
-// TODO: presentation component to display city header
-
 import React, {Component} from 'react';
+import CityModel from '../models/City';
 
 
 class CityHead extends Component {
+  state = {
+    city: ''
+  }
 
   submitPost = (e) => {
     e.preventDefault();
@@ -24,8 +26,17 @@ class CityHead extends Component {
     document.getElementById('newPostSub').addEventListener('submit', this.submitPost);
   }
 
+  getCityId = () => {
+    return window.location.pathname.replace(/^\/city\/(.+)$/, '$1');
+  }
+
   componentDidMount() {
     document.getElementById('addPost').addEventListener('click', this.openPostModal);
+
+    CityModel.getOne(this.getCityId())
+      .then((res) => {
+        this.setState({city: res.data[0]});
+      })
   }
 
   render() {
@@ -33,10 +44,11 @@ class CityHead extends Component {
       <div className="card no-gutters">
         <div className="row">
           <div className="col-4">
-            <h2>San Francisco Posts</h2>
+            <h2>{this.state.city.city}</h2>
+            <h3>{this.state.city.description}</h3>
           </div>
           <div className="col-8">
-            <img src="/images/cities/SF.jpg" alt="San Francisco skyline" />
+            <img src={this.state.city.image} alt={this.state.city.city} />
           </div>
         </div>
       </div>

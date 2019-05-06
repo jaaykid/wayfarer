@@ -6,6 +6,9 @@ class CityModel {
   static all() {
     return axios.get(CITY_API);
   }
+  static getOne(id) {
+    return axios.get(`${CITY_API}/${id}`);
+  }
   static getPosts(id) {
     return axios.get(`${CITY_API}/${id}/posts`);
   }

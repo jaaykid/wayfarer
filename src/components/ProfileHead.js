@@ -1,5 +1,3 @@
-// TODO: presentation component to display profile info
-
 import React, {Component} from 'react';
 import ProfileModel from '../models/Profile';
 
