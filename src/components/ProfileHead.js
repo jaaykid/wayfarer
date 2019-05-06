@@ -1,15 +1,12 @@
-//container for displaying Profile info
-//          and all posts for that user
-//calls PostsContainer: to get the posts from db
-//                      and call each Post
-//calls Cities for the sidebar
+// TODO: presentation component to display profile info
 
 import React, {Component} from 'react';
-import Profile from './components/Profile';
-import Cities from './components/Cities';
-import PostsContainer from './containers/PostsContainer';
 
-class ProfileContainer extends Component {
+const stylesImg = {
+  width: '100%',
+  float: 'right'
+}
+class ProfileHead extends Component {
 
   submitBioEdit = (e) => {
     e.preventDefault();
@@ -39,24 +36,33 @@ class ProfileContainer extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <Cities />
-          <div className="col-md-8">
-            <Profile />
-            <div className="postHead row">
-              <div className="col-1"> </div>
-              <h2 className="col-9">Your Posts</h2>
-              <div className="col-1">
-              </div>
-              <div className="col-1"> </div>
-            </div>
-          <PostsContainer />
-          </div>
+  <div className="card no-gutters">
+    <div className="row">
+      <div className="col-5">
+        <h2>UserName Profile</h2>
+        <div className="bioDisplay">
+          Name: myzCool lAstName<br />
+          Preferred City: San Francisco<br/>
+          SignUp Date: DATE
+        </div>
+        <div className="editBioBlock hide">
+          <form id="editBioForm" noValidate>
+            <input type="text" className="form-control" id="userName" name="userName" value="some cool name"/>
+            <input type="text" className="form-control" id="cityList" name="preferredCity" value="Cities"/>
+            <input type="submit" className="btn btn-primary float-right" id="submitEdit" value="Submit Edits" />
+            <input type="button" className="btn btn-warning float-right" id="cancelEdit" value="Cancel" />
+          </form>
         </div>
       </div>
-    )
-  }
+      <div className="editButton col-1">
+        <img src="/images/edit.png" alt="edit profile" />
+      </div>
+      <div className="col-6">
+        <img src="/images/Placeholder.png" alt="UserName" style={stylesImg}/>
+      </div>
+    </div>
+  </div>
+)
 }
-
-export default ProfileContainer;
+}
+export default ProfileHead;
