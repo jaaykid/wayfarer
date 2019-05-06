@@ -1,14 +1,11 @@
-//container for displaying all posts for a city
-//calling PostsContainer: to get the posts from db
-//                      and call each Post
-
 import React, {Component} from 'react';
-import City from './components/City';
-import Cities from './components/Cities';
-import PostsContainer from './containers/PostsContainer';
-import ModalPost from './components/ModalPost';
+import CityModel from '../models/City';
 
-class CityPosts extends Component {
+
+class CityHead extends Component {
+  state = {
+    city: ''
+  }
 
   submitPost = (e) => {
     e.preventDefault();
@@ -29,34 +26,33 @@ class CityPosts extends Component {
     document.getElementById('newPostSub').addEventListener('submit', this.submitPost);
   }
 
+  getCityId = () => {
+    return window.location.pathname.replace(/^\/city\/(.+)$/, '$1');
+  }
+
   componentDidMount() {
     document.getElementById('addPost').addEventListener('click', this.openPostModal);
+
+    CityModel.getOne(this.getCityId())
+      .then((res) => {
+        this.setState({city: res.data[0]});
+      })
   }
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="card no-gutters">
         <div className="row">
-          <div className="col-md-4">
-            <Cities />
+          <div className="col-4">
+            <h2>{this.state.city.city}</h2>
+            <h3>{this.state.city.description}</h3>
           </div>
-          <div className="col-md-8">
-            <City />
-            <div className="postHead row">
-              <div className="col-1"> </div>
-              <h2 className="col-9">Posts</h2>
-              <div className="col-1">
-                <img src="/images/addPost.png" alt="Add a post" id="addPost"/>
-              </div>
-              <div className="col-1"> </div>
-            </div>
-            <PostsContainer postType="city"/>
+          <div className="col-8">
+            <img src={this.state.city.image} alt={this.state.city.city} />
           </div>
         </div>
-        <ModalPost />
       </div>
     )
   }
 }
-
-export default CityPosts;
+export default CityHead;

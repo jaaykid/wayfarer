@@ -1,22 +1,26 @@
 import React, {Component} from 'react';
+import PostModel from './models/Post';
+import Post from './components/Post';
 
 class ShowPost extends Component {
+  state = {post: ''}
+
+  getPostId = () => {
+    return window.location.pathname.replace(/^\/post\/(.+)$/, '$1');
+  }
+
+  componentDidMount() {
+    PostModel.getOne(this.getPostId())
+      .then((res) => {
+        this.setState({post: res.data});
+      })
+  }
 
   render() {
-    console.log(this.props);
     return (
-      <div className="card no-gutters">
-        <div className="row">
-          <div className="col-2">
-            <img src="/images/Placeholder.png" alt="UserName"/>
-          </div>
-          <div className="col-10">
-          <h3>Post title</h3>
-          <h4>by USERNAME</h4>
-            Sorry, must dash! Pure mathematics can not lie! That's a relief. I hate babysitters. No. You're too short and bossy, and your nose is all funny. Rest is for the weary, sleep is for the dead. I feel like a hungry man eager for the feast!
-          </div>
-        </div>
-      </div>
+      <>
+        <Post post={this.state.post} />
+      </>
     )
   }
 }
