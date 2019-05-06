@@ -3,7 +3,7 @@
 //                      and call each Post
 
 import React, {Component} from 'react';
-import City from './components/City';
+import CityHead from './components/CityHead';
 import Cities from './components/Cities';
 import PostsContainer from './containers/PostsContainer';
 import ModalPost from './components/ModalPost';
@@ -37,11 +37,9 @@ class CityPosts extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4">
-            <Cities />
-          </div>
+          <Cities />
           <div className="col-md-8">
-            <City />
+            <CityHead />
             <div className="postHead row">
               <div className="col-1"> </div>
               <h2 className="col-9">Posts</h2>

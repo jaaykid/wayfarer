@@ -41,9 +41,7 @@ class ProfileContainer extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4">
-            <Cities />
-          </div>
+          <Cities />
           <div className="col-md-8">
             <Profile />
             <div className="postHead row">

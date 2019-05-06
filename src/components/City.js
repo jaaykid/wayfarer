@@ -1,19 +1,14 @@
-// TODO: presentation component to display city header
-
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const stylesImg = {
-  width: '100%'
-}
-
-const City = () => (
+const City = (props) => (
   <div className="card no-gutters">
     <div className="row">
       <div className="col-4">
-        <h2>San Francisco Posts</h2>
+        <img src={props.city.image} alt={`${props.city.city}`} />
       </div>
       <div className="col-8">
-        <img src="/images/cities/SF.jpg" alt="San Francisco skyline" style={stylesImg}/>
+        <Link to={`/city/${props.city._id}`}>{props.city.city}</Link>
       </div>
     </div>
   </div>
