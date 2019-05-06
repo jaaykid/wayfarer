@@ -1,6 +1,3 @@
-// TODO: presentation component for an indiv post
-// TODO: data passed in props
-
 import React from 'react';
 import {Link} from 'react-router-dom';
 
@@ -11,7 +8,7 @@ const Post = (props) => (
           <img src="/images/Placeholder.png" alt="UserName"/>
         </div>
         <div className="col-10">
-        <h3><Link to="/post">{props.post.title}</Link></h3>
+        <h3><Link to={`/post/${props.post._id}`}>{props.post.title}</Link></h3>
           {props.post.comment}
         </div>
       </div>

@@ -11,4 +11,4 @@ class PostModel {
   }
 }
 
-export default CityModel;
+export default PostModel;

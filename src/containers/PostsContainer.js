@@ -1,6 +1,3 @@
-// TODO: add db call
-// TODO: call indiv Post components
-
 import React, {Component} from 'react';
 import CityModel from '../models/City';
 import ProfileModel from '../models/Profile';

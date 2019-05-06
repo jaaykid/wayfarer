@@ -1,9 +1,3 @@
-//container for displaying Profile info
-//          and all posts for that user
-//calls PostsContainer: to get the posts from db
-//                      and call each Post
-//calls Cities for the sidebar
-
 import React, {Component} from 'react';
 import ProfileHead from './components/ProfileHead';
 import CityHead from './components/CityHead';

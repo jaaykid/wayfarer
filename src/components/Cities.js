@@ -1,6 +1,3 @@
-// TODO: sidebar presentation component of cities
-// TODO: click a city links to "/cities/:cityId"
-
 import React, {Component} from 'react';
 import City from './City';
 import CityModel from '../models/City';
