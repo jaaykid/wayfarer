@@ -6,6 +6,10 @@ class ProfileModel {
   static getOne(id) {
     return axios.get(`${PROFILE_API}/${id}`);
   }
+  static getPosts(id) {
+    return axios.get(`${PROFILE_API}/${id}/posts`);
+  }
+
 }
 
 export default ProfileModel;

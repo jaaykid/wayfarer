@@ -41,7 +41,7 @@ class GenPostPage extends Component {
               </div>
               <div className="col-1"> </div>
             </div>
-          <PostsContainer postsType={pageType}/>
+          <PostsContainer postType={pageType}/>
           </div>
         </div>
         <ModalPost />
