@@ -8,6 +8,7 @@ import React, {Component} from 'react';
 import Profile from './components/Profile';
 import Cities from './components/Cities';
 import PostsContainer from './containers/PostsContainer';
+import LoginNav from './components/LoginNav';
 
 class ProfileContainer extends Component {
 
@@ -39,6 +40,8 @@ class ProfileContainer extends Component {
 
   render() {
     return (
+      <>
+      <LoginNav />
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-4">
@@ -57,6 +60,7 @@ class ProfileContainer extends Component {
           </div>
         </div>
       </div>
+      </>
     )
   }
 }

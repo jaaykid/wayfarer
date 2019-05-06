@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import LoginNav from './components/LoginNav';
 
 class ShowPost extends Component {
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
+      <>
+      <LoginNav />
       <div className="card no-gutters">
         <div className="row">
           <div className="col-2">
@@ -17,6 +20,7 @@ class ShowPost extends Component {
           </div>
         </div>
       </div>
+      </>
     )
   }
 }

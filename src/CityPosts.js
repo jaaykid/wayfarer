@@ -7,6 +7,7 @@ import City from './components/City';
 import Cities from './components/Cities';
 import PostsContainer from './containers/PostsContainer';
 import ModalPost from './components/ModalPost';
+import LoginNav from './components/LoginNav';
 
 class CityPosts extends Component {
 
@@ -35,6 +36,8 @@ class CityPosts extends Component {
 
   render() {
     return (
+      <>
+      <LoginNav />
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-4">
@@ -55,6 +58,7 @@ class CityPosts extends Component {
         </div>
         <ModalPost />
       </div>
+      </>
     )
   }
 }

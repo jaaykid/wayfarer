@@ -3,7 +3,7 @@ import Modal from './Modal';
 
 class Nav extends Component  {
   state = {
-    login: false
+    login: false,
   }
 
   handleLogin = () => {
@@ -49,10 +49,12 @@ class Nav extends Component  {
       document.getElementById('logInPageBtn').addEventListener('click', this.removeSignUp);
   }
 
+
   submitLogin = (e) => {
   e.preventDefault();
   console.log('submitting login info');
   document.getElementById('loginModal').classList.remove('display');
+  document.getElementById('loginBtn').addEventListener('click', window.location.assign('/profile'));
   document.getElementById('newLoginSub').removeEventListener('submit', this.submitLogin);
 }
 
@@ -60,6 +62,7 @@ class Nav extends Component  {
     e.preventDefault();
     console.log('Submitting new user');
     document.getElementById('loginModal').classList.remove('display');
+    document.getElementById('joinBtn').addEventListener('click', window.location.assign('/profile'));
     document.getElementById('newSignUpSub').removeEventListener('submit', this.submitSignUp);
   }
 
@@ -79,7 +82,6 @@ class Nav extends Component  {
     document.getElementById('login').addEventListener('click', this.handleLogin);
     document.getElementById('signup').addEventListener('click', this.handleSignUp);
   }
-
 
   render() {
     return (

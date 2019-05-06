@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-//import './Modal.css';
 
 class Modal extends Component {
   render() {
@@ -9,7 +8,7 @@ class Modal extends Component {
       <div className="form-group">
           <h3>log in</h3>
       </div>
-          <form id="newLoginSub" novalidate>
+          <form id="newLoginSub" noValidate>
           <div className="form-group">
             <input type="text" className="form-control" id="loginTitle" name="title" placeholder="username"/>
           </div>
@@ -21,12 +20,21 @@ class Modal extends Component {
             <input type="button" className="btn btn-warning float-right" id="cancelModal" value="cancel" />
           </form>
         </div>
+                                                          {/* SignUp Modal */}
         <div className="modalBox" id="signUpModalBox">
+        <div className="form-group">
           <h3>sign up</h3>
-          <form id="newSignUpSub" novalidate>
+        </div>
+          <form id="newSignUpSub" noValidate>
+          <div className="form-group">
             <input type="text" className="form-control" id="signUpTitle" name="title" placeholder="username"/>
+          </div>
+          <div className="form-group">
             <input type="text" className="form-control" id="password" name="title" placeholder="password"/>
+          </div>
+          <div className="form-group">
             <input type="text" className="form-control" id="password2" name="title" placeholder="confirm password"/>
+          </div>
             <input type="submit" className="btn btn-primary float-right" id="joinBtn" value="let's get travelin'" />
             <input type="submit" className="btn btn-primary float-right" id="logInPageBtn" value="i already have an account" />
             <input type="button" className="btn btn-warning float-right" id="cancelModal2" value="cancel" />
