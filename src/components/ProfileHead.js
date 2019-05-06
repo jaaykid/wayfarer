@@ -7,7 +7,12 @@ const stylesImg = {
 }
 class ProfileHead extends Component {
   state = {
-    profile: ''
+    profile: {
+      username: 'anonymous',
+      preferredCity: '5cd046f66c7541000c3a6e74',
+      signupDate: Date.now,
+      profilePicture: '/images/Placeholder.png'
+    }
   }
 
   submitBioEdit = (e) => {

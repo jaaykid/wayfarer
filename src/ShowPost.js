@@ -10,7 +10,7 @@ class ShowPost extends Component {
   }
 
   componentDidMount() {
-    PostModel.getOne()
+    PostModel.getOne(this.getPostId())
       .then((res) => {
         this.setState({post: res.data});
       })
